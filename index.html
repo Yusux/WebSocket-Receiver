@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WebSocket Receiver</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Yusux's Lab page">
+        <meta name="keywords" content="Yusux, Lab">
+        <meta name="author" content="Yusux">
+        <meta name="copyright" content="Yusux">
+        <link rel="icon" href="https://cdn.yusux.xyz/websrc/logo/favicon-32x32.png">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.yusux.xyz/websrc/lab/project/wsrecv/css/customstyle.min.css">
+        <!-- <link rel="stylesheet" href="css/customstyle.css"> -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=JetBrains Mono">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <div class="container-fluid text-end config-div">
+            <a id="configSetter" class="dark-config" href="javascript:;" data-bs-toggle="modal" data-bs-target="#configModal">
+                <span id="configtext" class="icon iconfont">&#xe7f9;</span>
+            </a>
+        </div>
+
+        <div class="container text-center title">
+            WebSocket Receiver
+        </div>
+
+        <div class="container">
+            <p id="received">
+                <strong>Received Messages:</strong>
+            </p>
+        </div>
+        
+
+        <div class="container-fluid text-end toggle-div">
+            <a id="modeToggle" class="dark-toggle" href="javascript:;" onclick="themeChange();">
+                <span id="modetext" class="icon iconfont">&#xe6c0;</span>
+            </a>
+        </div>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="configModal" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="configModalLabel">WebSocket Config</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                        <label for="host" class="col-form-label">Host IP:</label>
+                        <input type="text" class="form-control" id="host">
+                        </div>
+                        <div class="mb-3">
+                        <label for="port" class="col-form-label">Service Port:</label>
+                        <input type="text" class="form-control" id="port">
+                        </div>
+                    </form>
+                </div>
+                <div class="container" id="liveAlertPlaceholder"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="connect">connect</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.yusux.xyz/websrc/lab/project/wsrecv/js/customscript.min.js"></script>
+        <!-- <script src="js/customscript.js"></script> -->
+    </body>
+</html>

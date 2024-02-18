@@ -1,0 +1,66 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: "JetBrains Mono";
+}
+
+/* Code for Firefox */
+::-moz-selection {
+    color: #fff;
+    background: #222;
+}
+  
+::selection {
+    color: #fff;
+    background: #222;
+}
+
+@font-face {
+    font-family: "iconfont";
+    src: url("https://cdn.yusux.xyz/websrc/lab/project/wsrecv/font/iconfont.ttf") format("truetype");
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 1.5rem;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.config-div {
+    position: absolute;
+    color: #fff;
+    top: 0.7rem;
+    right: 1rem;
+}
+
+.dark-config {
+    font-size: 2.5rem;
+    color: #222;
+    transition: all 0.25s;
+    text-decoration: none;
+}
+
+.toggle-div {
+    position: absolute;
+    color: #fff;
+    bottom: 0.7rem;
+    right: 1rem;
+}
+
+.dark-toggle {
+    font-size: 2.5rem;
+    color: #222;
+    transition: all 0.25s;
+    text-decoration: none;
+}
