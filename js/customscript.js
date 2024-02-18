@@ -53,6 +53,12 @@ const appendAlert = (message, type) => {
 }
 
 function createWebSocket() {
+    // check if the WebSocket is supported
+    if (!window.WebSocket) {
+        appendAlert('WebSocket is not supported', 'danger');
+        return;
+    }
+
     // connect to the server according to the input
     var host = document.getElementById("host").value;
     var port = document.getElementById("port").value;
@@ -62,11 +68,11 @@ function createWebSocket() {
         return;
     }
 
-    // connect to the server
-    connect(host, port);
-
     // alert message
     appendAlert('Connecting to ' + host + ':' + port, 'info');
+
+    // connect to the server
+    connect(host, port);
 }
 
 // WebSocket client
