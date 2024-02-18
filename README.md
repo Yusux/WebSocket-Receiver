@@ -1,20 +1,5 @@
-<style>
-@font-face {
-    font-family: "iconfont";
-    src: url("https://raw.githubusercontent.com/Yusux/WebSocket-Receiver/main/font/iconfont.ttf") format("truetype");
-}
-
-.iconfont {
-    font-family: "iconfont" !important;
-    font-size: 1rem;
-    font-style: normal;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-</style>
-
 <div align="center">
-    <h3 align="center">WebSocket Receiver</h3>
+    <h2 align="center">WebSocket Receiver</h2>
     <p align="center">
         A WebSocket client to receive messages from a server using JavaScript and HTML.
         <br />
@@ -33,8 +18,12 @@ Since I found it difficult to find a good WebSocket client that only uses html a
 
 ### Built With
 
+<center>
+
 [![Static Badge](https://img.shields.io/badge/Bootstrap-563D7C?logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
 [![Static Badge](https://img.shields.io/badge/jQuery-0769AD?logo=jquery&logoColor=white)](https://jquery.com)
+
+</center>
 
 ## Getting Started
 
@@ -43,7 +32,7 @@ The css and javascript files are in the css and js folders respectively. The htm
 ### Usage
 
 1. Open the `index.html` file in a browser.
-2. Click the <span id="configtext" class="icon iconfont">&#xe7f9;</span> button on the top right corner to open the configuration modal.
+2. Click the config button on the top right corner to open the configuration modal.
 3. Input the server address and port in the input fields.
 4. Click the `Connect` button to connect to the server.
 5. If the connection is successful, the modal will close after about 2 seconds and the messages will start to appear in the message box.
