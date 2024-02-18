@@ -56,6 +56,13 @@ function createWebSocket() {
     // connect to the server according to the input
     var host = document.getElementById("host").value;
     var port = document.getElementById("port").value;
+    // check if the input is empty
+    if (host == '' || port == '') {
+        appendAlert('Please enter the host and port', 'danger');
+        return;
+    }
+
+    // connect to the server
     connect(host, port);
 
     // alert message
