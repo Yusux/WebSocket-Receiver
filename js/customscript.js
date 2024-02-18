@@ -52,19 +52,14 @@ const appendAlert = (message, type) => {
     alertPlaceholder.append(wrapper)
 }
 
-const alertTrigger = document.getElementById('connect')
-if (alertTrigger) {
-    alertTrigger.addEventListener('click', () => {
-        // check if the alert is already visible
+function createWebSocket() {
+    // connect to the server according to the input
+    var host = document.getElementById("host").value;
+    var port = document.getElementById("port").value;
+    connect(host, port);
 
-        // connect to the server according to the input
-        var host = document.getElementById("host").value;
-        var port = document.getElementById("port").value;
-        connect(host, port);
-
-        // alert message
-        appendAlert('Connecting to ' + host + ':' + port, 'info');
-    })
+    // alert message
+    appendAlert('Connecting to ' + host + ':' + port, 'info');
 }
 
 // WebSocket client
