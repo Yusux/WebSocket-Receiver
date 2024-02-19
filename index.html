@@ -52,10 +52,13 @@
                 <div class="modal-body">
                     <form>
                         <div class="mb-3">
+                        <label for="protocol" class="col-form-label">Protocol:</label>
+                        <select class="form-select" id="protocol">
+                            <option value="1">ws</option>
+                            <option value="2">wss</option>
+                        </select>
                         <label for="host" class="col-form-label">Host IP:</label>
                         <input type="text" class="form-control" id="host">
-                        </div>
-                        <div class="mb-3">
                         <label for="port" class="col-form-label">Service Port:</label>
                         <input type="text" class="form-control" id="port">
                         </div>

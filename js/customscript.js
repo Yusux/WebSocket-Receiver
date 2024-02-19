@@ -60,6 +60,7 @@ function createWebSocket() {
     }
 
     // connect to the server according to the input
+    var protocol = document.getElementById("protocol").value;
     var host = document.getElementById("host").value;
     var port = document.getElementById("port").value;
     // check if the input is empty
@@ -69,10 +70,10 @@ function createWebSocket() {
     }
 
     // alert message
-    appendAlert('Connecting to ' + host + ':' + port, 'info');
+    appendAlert('Connecting to ' + protocol + '://' + host + ':' + port, 'info');
 
     // connect to the server
-    connect(host, port);
+    connect(protocol, host, port);
 }
 
 // WebSocket client
@@ -85,11 +86,22 @@ function writeMessage(message) {
 }
 
 
-function connect(host, port) {
-    // Create WebSocket connection.
-    var ws = new WebSocket('ws://' + host + ':' + port);
+function connect(protocol, host, port) {
+    // check if the WebSocket is supported
+    if (!window.WebSocket) {
+        appendAlert('WebSocket is not supported', 'danger');
+        return;
+    }
 
-    // Connection opened
+    // check if it is https
+    if (window.location.protocol == 'https:' && protocol == 'ws') {
+        appendAlert('Loading the page over HTTPS, only secure WebSocket (wss) is supported', 'danger');
+    }
+
+    // create WebSocket connection
+    var ws = new WebSocket(protocol + '://' + host + ':' + port);
+
+    // set event handlers
     ws.onopen = function () {
         console.log('Connected to server');
         // alert message

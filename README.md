@@ -4,7 +4,7 @@
         A WebSocket client to receive messages from a server using JavaScript and HTML.
         <br />
         <br />
-        <a href="https://lab.yusux.xyz/WebSocket-Receiver">View Demo</a>
+        <a href="http://lab.yusux.xyz/WebSocket-Receiver">View Demo</a>
         ·
         <a href="https://github.com/Yusux/WebSocket-Receiver/issues">Report Bug</a>
         ·
@@ -18,12 +18,8 @@ Since I found it difficult to find a good WebSocket client that only uses html a
 
 ### Built With
 
-<center>
-
-[![Static Badge](https://img.shields.io/badge/Bootstrap-563D7C?logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
+[![Static Badge](https://img.shields.io/badge/Bootstrap-563D7C?logo=bootstrap&logoColor=white)](https://getbootstrap.com/)  
 [![Static Badge](https://img.shields.io/badge/jQuery-0769AD?logo=jquery&logoColor=white)](https://jquery.com)
-
-</center>
 
 ## Getting Started
 
@@ -33,9 +29,10 @@ The css and javascript files are in the css and js folders respectively. The htm
 
 1. Open the `index.html` file in a browser.
 2. Click the config button on the top right corner to open the configuration modal.
-3. Input the server address and port in the input fields.
-4. Click the `Connect` button to connect to the server.
-5. If the connection is successful, the modal will close after about 2 seconds and the messages will start to appear in the message box.
+3. Choose the protocol (ws or wss) from the dropdown. Only `wss` is allowed if the server uses `https`.
+4. Input the server address and port in the input fields.
+5. Click the `Connect` button to connect to the server.
+6. If the connection is successful, the modal will close after about 2 seconds and the messages will start to appear in the message box.
 
 |Config Example|Receiving Example|
 |:-:|:-:|
