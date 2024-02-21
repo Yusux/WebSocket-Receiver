@@ -81,8 +81,16 @@ function writeMessage(message) {
     var received = document.getElementById("received");
     var br = document.createElement("BR");
     var text = document.createTextNode(message);
-    received.appendChild(br);
-    received.appendChild(text);
+    // add a line break before the message
+    if (received.childNodes.length > 0) {
+        received.insertBefore(br, received.firstChild);
+    }
+    // add the message to the received div
+    received.insertBefore(text, received.firstChild);
+    // remove the last child if the number of children is greater than 15
+    if (received.childNodes.length > 15) {
+        received.removeChild(received.lastChild);
+    }
 }
 
 
