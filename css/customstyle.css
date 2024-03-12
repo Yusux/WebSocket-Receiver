@@ -19,7 +19,7 @@ body {
 
 @font-face {
     font-family: "iconfont";
-    src: url("https://cdn.yusux.xyz/websrc/lab/project/wsrecv/font/iconfont.ttf") format("truetype");
+    src: url("../font/iconfont.ttf") format("truetype");
 }
 
 .iconfont {
