@@ -1,3 +1,8 @@
+// force http
+if (window.location.protocol == 'https:' && window.location.hostname != 'localhost') {
+    window.location.href = window.location.href.replace('https', 'http');
+}
+
 // theme changer
 theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'light' : 'dark';
 function themeChange() {
